@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SampleLiveStream" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gil-1z-Gch">
+                                <rect key="frame" x="105.5" y="723" width="203" height="71"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTz-hK-T0t">
+                                        <rect key="frame" x="20" y="20" width="67.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Start"/>
+                                        <connections>
+                                            <action selector="StartStopLive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="584-VZ-zwO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRZ-BS-xvt">
+                                        <rect key="frame" x="107.5" y="20" width="67.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Switch"/>
+                                        <connections>
+                                            <action selector="switchCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i3c-8T-s9E"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="gRZ-BS-xvt" firstAttribute="height" secondItem="HTz-hK-T0t" secondAttribute="height" id="2Tj-LH-jkF"/>
+                                    <constraint firstAttribute="trailing" secondItem="gRZ-BS-xvt" secondAttribute="trailing" constant="28" id="81S-9o-7Cb"/>
+                                    <constraint firstAttribute="height" constant="71" id="CSs-By-WbD"/>
+                                    <constraint firstItem="gRZ-BS-xvt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HTz-hK-T0t" secondAttribute="trailing" constant="8" symbolic="YES" id="L0a-oS-LZP"/>
+                                    <constraint firstItem="gRZ-BS-xvt" firstAttribute="width" secondItem="HTz-hK-T0t" secondAttribute="width" id="L6Z-qI-LBZ"/>
+                                    <constraint firstItem="gRZ-BS-xvt" firstAttribute="centerY" secondItem="gil-1z-Gch" secondAttribute="centerY" id="smt-Me-FPb"/>
+                                    <constraint firstItem="HTz-hK-T0t" firstAttribute="centerY" secondItem="gil-1z-Gch" secondAttribute="centerY" id="vJq-Du-cSM"/>
+                                    <constraint firstItem="HTz-hK-T0t" firstAttribute="leading" secondItem="gil-1z-Gch" secondAttribute="leading" constant="20" id="ybx-JF-KEC"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TBd-eT-cdV">
+                                <rect key="frame" x="0.0" y="44" width="414" height="599"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gil-1z-Gch" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7dw-0v-lIN"/>
+                            <constraint firstItem="gil-1z-Gch" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="105.5" id="8l9-an-XBL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gil-1z-Gch" secondAttribute="bottom" constant="68" id="Lxp-qN-cSB"/>
+                            <constraint firstItem="TBd-eT-cdV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xwu-O7-eUA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TBd-eT-cdV" secondAttribute="trailing" id="fLf-2F-ZTI"/>
+                            <constraint firstItem="TBd-eT-cdV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gAh-Ne-1nd"/>
+                            <constraint firstItem="gil-1z-Gch" firstAttribute="top" secondItem="TBd-eT-cdV" secondAttribute="bottom" constant="80" id="kde-6f-31A"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="TBd-eT-cdV" id="CuI-06-fCh"/>
+                        <outlet property="startStopBtn" destination="HTz-hK-T0t" id="S1n-3X-NdY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

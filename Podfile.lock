@@ -1,0 +1,24 @@
+PODS:
+  - HaishinKit (1.1.8):
+    - Logboard (~> 2.2.2)
+  - LiveStreamIos (0.0.2):
+    - HaishinKit (~> 1.1.0)
+  - Logboard (2.2.2)
+
+DEPENDENCIES:
+  - LiveStreamIos
+
+SPEC REPOS:
+  trunk:
+    - HaishinKit
+    - LiveStreamIos
+    - Logboard
+
+SPEC CHECKSUMS:
+  HaishinKit: c7995204dbd60e89d8545535c17e0e3f04247ec6
+  LiveStreamIos: dffd0e5d6f9fb712f72ac87eb018e0396bc1284e
+  Logboard: 0ab6bbd984ed032b3f0b615cef06779a73445c80
+
+PODFILE CHECKSUM: a478f90cecd960716b74fe9934d0fd55208f7e5c
+
+COCOAPODS: 1.11.2

@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-SampleLiveStream/Pods-SampleLiveStream-frameworks.sh
+${BUILT_PRODUCTS_DIR}/HaishinKit/HaishinKit.framework
+${BUILT_PRODUCTS_DIR}/LiveStreamIos/LiveStreamIos.framework
+${BUILT_PRODUCTS_DIR}/Logboard/Logboard.framework

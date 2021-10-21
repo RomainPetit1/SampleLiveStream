@@ -1,0 +1,6 @@
+framework module Pods_SampleLiveStream {
+  umbrella header "Pods-SampleLiveStream-umbrella.h"
+
+  export *
+  module * { export * }
+}
